@@ -1,0 +1,89 @@
+
+
+<div class="columns my-5">
+  <div class="column is-6">
+     <div class="columns is-centered">
+        <div class="column is-10">
+           <div novalidate="" class="ng-untouched ">
+              <div class="field">
+                 <label class="label">Número de Placa (padrão antigo)</label>
+                 <div class="control">
+                   <input type="text" [(ngModel)]="placaAntiga" placeholder="Digite um número de uma placa"   class="input ng-untouched "></div>
+
+              </div>
+           </div>
+           <hr div>
+           <div novalidate="" class="ng-untouched ">
+              <div class="field">
+                 <label class="label">Número de Placa (padrão mercosul)</label>
+                 <div class="control">
+                   <input type="text" [(ngModel)]="placaMercosul" placeholder="Digite um número de uma placa"  class="input ng-untouched "></div>
+              </div>
+           </div>
+           <hr div>
+           <div novalidate="" class="ng-untouched ">
+              <div class="field">
+                 <label class="label">Número de Telefone BR</label>
+                 <div class="control">
+                   <input type="text" [(ngModel)]="telefoneBr" placeholder="Digite um número de telefone"  class="input ng-untouched "></div>
+              </div>
+           </div>
+           <hr div>
+           <div novalidate="" class="ng-untouched ">
+              <div class="field">
+                 <label class="label">Número de Telefone US</label>
+                 <div class="control"><input type="text" placeholder="Digite um número de telefone"  class="input ng-untouched "></div>
+              </div>
+           </div>
+           <hr div>
+           <div novalidate="" class="ng-untouched ">
+              <div class="field">
+                 <label class="label">Nome completo ABNT</label>
+                 <div class="control"><input type="text" [(ngModel)]="nome" placeholder="Digite o nome completo de uma pessoa"  class="input ng-untouched "></div>
+              </div>
+           </div>
+        </div>
+     </div>
+  </div>
+  <div class="column is-6">
+     <div class="columns is-centered">
+        <div class="column is-10">
+           <div class="field">
+              <label class="label">Resultado</label>
+              <div class="control">
+
+                 <input disabled="" [ngModel]="placaAntiga | placaCarro" (ngModelChange)="placaAntiga=$event" name="inputField"  type="text" placeholder="Inválido" class="input is-danger">
+              </div>
+           </div>
+           <hr div>
+           <div class="field">
+              <label class="label">Resultado</label>
+              <div class="control">
+                 <!----><input disabled="" [ngModel]="placaMercosul | placaCarroMercosul" (ngModelChange)="placaAntiga=$event" type="text" placeholder="Inválido" class="input is-danger"><!----><!---->
+              </div>
+           </div>
+           <hr div>
+           <div class="field">
+              <label class="label">Resultado</label>
+              <div class="control">
+                 <!----><input disabled="" type="text" [ngModel]="telefoneBr | telefoneBr"  placeholder="Inválido" class="input is-danger"><!----><!---->
+              </div>
+           </div>
+           <hr div>
+           <div class="field">
+              <label class="label">Resultado</label>
+              <div class="control">
+                 <!----><input disabled="" type="text" placeholder="Inválido" class="input is-danger"><!----><!---->
+              </div>
+           </div>
+           <hr div>
+           <div class="field">
+              <label class="label">Resultado</label>
+              <div class="control">
+                 <!----><input disabled="" type="text" [ngModel]="nome | nomeABNT"  placeholder="Inválido" class="input is-danger"><!----><!---->
+              </div>
+           </div>
+        </div>
+     </div>
+  </div>
+</div>
